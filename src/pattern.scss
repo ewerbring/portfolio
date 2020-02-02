@@ -1,0 +1,260 @@
+$colors: (
+  // primary: rgb(0, 121, 250),
+    primary: rgb(235, 235, 235),
+  accent: red,
+  darktext: rgb(36, 36, 36),
+  border: rgb(62, 62, 62),
+  blackbox: rgb(46, 46, 46),
+  lightbox: rgb(24, 24, 24),
+  main: rgb(80, 187, 141),
+  light: rgb(49, 52, 55)
+);
+
+// map-get($colors, primary)
+
+.maincontainer {
+  box-shadow: 0 0 5px 2px rgba(98, 0, 255, 0.3);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 96vh;
+  margin: 20px;
+  border: 1px solid map-get($colors, border);
+}
+
+.boxNew {
+  width: 100%;
+  height: 100%;
+  border: 1px solid map-get($colors, border);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.b5 {
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  overflow: hidden;
+}
+
+.b2,
+.b5,
+.b8 {
+  grid-column: 2/4;
+}
+
+.b2 {
+  background-color: map-get($colors, light);
+}
+
+.blackbox {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  border: 1px solid map-get($colors, border);
+  background-color: map-get($colors, blackbox);
+}
+
+.whitebox {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  border: 1px solid map-get($colors, border);
+  background-color: map-get($colors, light);
+}
+
+.w1 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+  border: 1px solid map-get($colors, border);
+}
+.w2 {
+  grid-column: 3/5;
+  grid-row: 3/5;
+  border: 1px solid map-get($colors, border);
+}
+.w3 {
+  box-sizing: border-box;
+
+  grid-column: 1/3;
+  grid-row: 1/3;
+  border: 1px solid map-get($colors, border);
+}
+.w4 {
+  box-sizing: border-box;
+  grid-column: 1/3;
+  grid-row: 3/5;
+  border: 1px solid map-get($colors, border);
+}
+
+.w5 {
+  box-sizing: border-box;
+
+  grid-column: 1/5;
+  grid-row: 1/3;
+  border: 1px solid map-get($colors, border);
+}
+
+.underCircle {
+  grid-column: 1/5;
+  grid-row: 1/5;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.corner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  //   grid-row: 4/6;
+  //   grid-column: 4/6;
+}
+.circle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/5;
+  grid-row: 1/5;
+  z-index: 20;
+}
+
+.outerring {
+  box-shadow: inset 0 0 5px 2px rgba(101, 101, 101, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid map-get($colors, border);
+  z-index: 10;
+  overflow: hidden;
+  transform: rotate(45deg);
+}
+.outerring:active {
+  animation: example 1s ease alternate;
+  animation-iteration-count: 1;
+}
+
+@keyframes example {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+.innerring {
+  box-shadow: 0 0 5px 2px rgba(101, 101, 101, 0.5);
+  z-index: 30;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: map-get($colors, main);
+  border: 1px solid map-get($colors, border);
+  position: absolute;
+}
+
+.ir1 {
+  background-color: rgb(83, 64, 205);
+}
+.ir2 {
+  background-color: rgb(255, 205, 78);
+}
+.ir3 {
+  background-color: rgb(67, 148, 90);
+}
+.ir4 {
+  background-color: rgb(211, 56, 56);
+}
+
+.mainImageBox {
+  grid-column: 2/8;
+  grid-row: 1/9;
+
+  display: flex;
+  align-items: center;
+  background-color: map-get($colors, blackbox);
+  box-shadow: inset 0 0 5px 2px black;
+  z-index: 50;
+}
+.mainImage {
+  width: 100%;
+  border: 1px solid map-get($colors, border);
+  position: relative;
+  z-index: -2;
+
+  //   height: 100%;
+}
+
+.columnLeft {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-row: 1/9;
+}
+
+.headerBox {
+  grid-column: 2/4;
+  grid-row: 1/3;
+  background-color: map-get($colors, light);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.triangleTop {
+  transform: rotate(-90deg);
+  left: 0px;
+  top: 160px;
+  width: 0;
+  height: 0;
+  position: relative;
+  border-top: 20px solid transparent;
+  border-left: 200px solid map-get($colors, blackbox);
+  border-bottom: 20px solid transparent;
+}
+.triangleRight {
+  right: -100px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  position: relative;
+  border-top: 20px solid transparent;
+  border-right: 200px solid map-get($colors, blackbox);
+  border-bottom: 20px solid transparent;
+}
+.triangleBottom {
+  transform: rotate(90deg);
+  left: 0px;
+  top: -160px;
+  width: 0;
+  height: 0;
+  position: relative;
+  border-top: 20px solid transparent;
+  border-left: 200px solid map-get($colors, blackbox);
+  border-bottom: 20px solid transparent;
+}
+.triangleLeft {
+  left: -100px;
+  top: -20px;
+  width: 0;
+  height: 0;
+  position: relative;
+  border-top: 20px solid transparent;
+  border-left: 200px solid map-get($colors, blackbox);
+  border-bottom: 20px solid transparent;
+}
+
+.blackbox:hover {
+  background-color: yellow;
+}

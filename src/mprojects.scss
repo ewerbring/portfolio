@@ -1,0 +1,105 @@
+$colors: (
+  primary: rgb(235, 235, 235),
+  accent: red,
+  darktext: rgb(36, 36, 36)
+);
+
+* {
+  cursor: none;
+}
+.imageboxmobile {
+  position: relative;
+  height: 94 vh;
+  overflow: scroll;
+  bottom: 10px;
+  right: 10px;
+  width: 100%;
+  border: 2px solid white;
+  z-index: 10;
+}
+
+.mobtitlebox {
+  color: green;
+}
+.mobile {
+  overflow: scroll;
+  position: relative;
+  top: 200px;
+}
+
+@font-face {
+  font-family: "Favorit1";
+  src: url("./Assets/fonts/favorit/Favorit-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+@font-face {
+  font-family: "Aut1";
+  src: url("./Assets/fonts/auth/AUTHENTICSans-Condensed-130.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: bold;
+}
+
+.mobileHero {
+  position: relative;
+  width: 90%;
+  padding: 20px;
+}
+
+.textBoxM {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  color: map-get($colors, darktext);
+  font-size: 11px;
+  line-height: 15px;
+  width: 100%;
+}
+
+.imageGalleryM img {
+  height: 100%;
+  height: 200px;
+}
+
+.image-gallery-slide {
+  height: 100%;
+}
+.image-gallery-slide img {
+  height: 100%;
+}
+.titlebox {
+  font-weight: bolder;
+}
+.descbox,
+.titlebox {
+  padding: 2px;
+  padding-top: 20px;
+}
+
+.aboutparagraphM {
+  font-family: "Aut1";
+  font-size: 1rem;
+  line-height: 2rem;
+  top: 150px;
+  padding: 20px;
+  position: relative;
+  width: 300px;
+  display: inline-block;
+  text-align: left;
+  color: map-get($colors, darktext);
+  margin: 0 5vw;
+}
+
+.inlinkM {
+  margin-top: 20px;
+  display: block;
+  color: map-get($colors, darktext);
+  font-size: 2.2rem;
+  position: relative;
+  text-decoration: none;
+}
+.inlinkM:hover {
+  color: rgb(247, 1, 1);
+}

@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "Favorit1";
+  src: url("./Assets/fonts/favorit/Favorit-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit2";
+  src: url("./Assets/fonts/favorit/Favorit-Bold.woff") format("woff");
+  font-weight: 500;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Aut1";
+  src: url("./Assets/fonts/auth/AUTHENTICSans-Condensed-130.woff") format("woff");
+  font-weight: 500;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Aut2";
+  src: url("./Assets/fonts/auth/AUTHENTICSans-90.woff") format("woff");
+  font-weight: 500;
+  font-style: bold;
+}
+
+.imagebox::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  cursor: none;
+}
+
+.imagebox {
+  position: absolute;
+  height: 94 vh;
+  overflow: scroll;
+  bottom: 10px;
+  right: 10px;
+  width: 50%;
+  border: 2px solid white;
+  z-index: 10;
+  top: 100px;
+}
+
+.pImage {
+  width: 100%;
+}
+
+.descriptionbox {
+  background-color: rgba(24, 23, 42, 0.7);
+  width: 30vw;
+  padding: 40px;
+  font-size: 1rem;
+  color: white;
+  z-index: 220;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  font-family: "Aut2";
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 90px 10px blue;
+          box-shadow: 0px 0px 90px 10px blue;
+}
+
+.aws-btn {
+  --slider-height-percentage: 61%;
+  --slider-transition-duration: 200ms;
+  --organic-arrow-thickness: 9px;
+  --organic-arrow-border-radius: 0px;
+  --organic-arrow-height: 32px;
+  --organic-arrow-color: #d5d5d5;
+  --control-button-width: 5%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: #f33d42;
+  --control-bullet-active-color: #cf3438;
+  --loader-bar-color: #851515;
+  --loader-bar-height: 4px;
+}
+
+.wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 0px;
+  height: 0;
+}
+
+.wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leftContainer {
+  overflow: scroll;
+  height: 100vh;
+  position: absolute;
+  z-index: 150;
+  top: 70px;
+  width: 250px;
+  border: none;
+}
+
+.pInfo {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  padding: 20px;
+  color: #c7c7c7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  width: 100%;
+  top: 20px;
+  position: relative;
+  font-family: "Aut1";
+  border: none;
+  text-decoration: none;
+}
+
+.projectTitle:hover {
+  font-style: italic;
+}
+
+.projectTitleBox {
+  font-size: 1rem;
+  color: green;
+  height: auto;
+  margin-bottom: -30px;
+  border: none;
+}
+
+.pHeader {
+  font-size: 1.2rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pYear {
+  margin-bottom: 15px;
+}
+
+.grimTitle {
+  color: green;
+  font-size: 2rem;
+  position: relative;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  font-family: "Aut1";
+  width: 5vw;
+}
+
+.shootTitle {
+  color: green;
+  font-size: 2rem;
+  position: relative;
+  font-family: "Aut1";
+  width: 10vw;
+}
+
+.desktop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  top: 50px;
+  position: relative;
+}
+
+.desktopbox {
+  padding: 20px;
+  border: 2px solid #c2c2c2;
+  margin: 10px;
+}
+
+.desktopbox:hover {
+  background-color: #d0e6ff;
+}
+
+.image-gallery-slide {
+  height: auto;
+}
+
+.imageGallery {
+  height: 100%;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  top: -200px;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 150;
+  pointer-events: none;
+}
+/*# sourceMappingURL=projects.css.map */
